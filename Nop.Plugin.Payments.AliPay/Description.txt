@@ -1,9 +1,9 @@
 ﻿Group: Payment methods
 FriendlyName: AliPay
 SystemName: Payments.AliPay
-Version: 1.20
+Version: 1.0
 SupportedVersions: 3.90
-Author: nopCommerce team
+Author: Alex Caroll
 DisplayOrder: 1
 FileName: Nop.Plugin.Payments.AliPay.dll
 Description: This payment module allows you to integrate with AliPay, payment module
