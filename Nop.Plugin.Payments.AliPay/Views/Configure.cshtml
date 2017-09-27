@@ -1,0 +1,75 @@
+﻿@{
+    Layout = "";
+}
+@model ConfigurationModel
+@using Nop.Plugin.Payments.AliPay.Models;
+@using Nop.Web.Framework;
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.NopLabelFor(model => model.AppID)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.AppID)
+                        @Html.ValidationMessageFor(model => model.AppID)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.NopLabelFor(model => model.GatewayUrl)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.GatewayUrl)
+                        @Html.ValidationMessageFor(model => model.GatewayUrl)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.NopLabelFor(model => model.PrivateKey)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.PrivateKey)
+                        @Html.ValidationMessageFor(model => model.PrivateKey)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.NopLabelFor(model => model.AlipayPublicKey)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.AlipayPublicKey)
+                        @Html.ValidationMessageFor(model => model.AlipayPublicKey)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.NopLabelFor(model => model.SignType)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.SignType)
+                        @Html.ValidationMessageFor(model => model.SignType)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.NopLabelFor(model => model.AdditionalFee)
+                    </div>
+                    <div class="col-md-9">
+                        @Html.NopEditorFor(model => model.AdditionalFee)
+                        @Html.ValidationMessageFor(model => model.AdditionalFee)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-9 col-md-offset-3">
+                        <input type="submit" name="save" class="btn bg-blue" value="@T("Admin.Common.Save")"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
